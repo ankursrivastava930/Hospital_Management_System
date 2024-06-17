@@ -31,9 +31,10 @@ app.use(
   })
 );
 
-app.get('/', ()=>{
-  res.send("Hello");
-})
+app.get('/', (req, res) => {
+    // Your logic here
+    res.send({ success: true, message: "Hello World" });
+});
 
 app.use("/api/v1/message", messageRouter);
 app.use("/api/v1/user", userRouter);
