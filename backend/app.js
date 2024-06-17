@@ -31,9 +31,9 @@ app.use(
   })
 );
 
-app.get('/').json({
-  message:"welcome to api "
-});
+app.get('/', ()=>{
+  res.send("Hello");
+})
 
 app.use("/api/v1/message", messageRouter);
 app.use("/api/v1/user", userRouter);
